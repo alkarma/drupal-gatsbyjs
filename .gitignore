@@ -6,6 +6,7 @@
 /web/themes/contrib/
 /web/profiles/contrib/
 /web/libraries/
+.lando.yml
 
 # Ignore sensitive information
 /web/sites/*/settings.php
@@ -22,3 +23,8 @@
 
 # Ignore .env files as they are personal
 /.env
+
+# Ingonre gatsby cache
+/gatsbysite/.cache/
+/gatsbysite/public
+
