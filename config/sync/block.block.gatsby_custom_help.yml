@@ -1,0 +1,22 @@
+uuid: b696b8f9-e032-4a66-a1f9-e2a8f8b32951
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - gatsby_custom
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: gatsby_custom_help
+theme: gatsby_custom
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 34d16415-9bce-4120-ba08-d328c54b0805
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gatsby_custom
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: gatsby_custom_messages
+theme: gatsby_custom
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

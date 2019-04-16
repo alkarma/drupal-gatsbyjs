@@ -1,0 +1,22 @@
+uuid: fa02c315-71ae-4e7d-bffa-380281fccc42
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gatsby_custom
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: gatsby_custom_breadcrumbs
+theme: gatsby_custom
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

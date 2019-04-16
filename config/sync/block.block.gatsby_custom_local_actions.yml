@@ -1,0 +1,20 @@
+uuid: d6bd29b7-67d8-4432-a3ba-8eba8fdf838c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gatsby_custom
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: gatsby_custom_local_actions
+theme: gatsby_custom
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
