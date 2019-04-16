@@ -1,0 +1,11 @@
+name: Gatsby custom
+type: theme
+description: 'My Awesome theme'
+package: Other
+core: 8.x
+libraries:
+  - gatsby_custom/global-styling
+ 
+base theme: classy
+#Using Classy as a base theme https://www.drupal.org/theme-guide/8/classy
+
