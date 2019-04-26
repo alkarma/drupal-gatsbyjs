@@ -1,55 +1,49 @@
 import React from "react"
-import { Link } from "gatsby"
-import { StaticQuery, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from "../components/layout"
+import BlogTeaser from "../components/blogteaser.js"
 
-const getArticles = graphql` 
+const BlogPage = ( { data } ) => (
+  <Layout>
+    <h1>Blog list</h1>
+    {data.allNodeArticle.edges.map((post) =>(
+      <BlogTeaser
+        slug={post.node.fields.slug}
+        key={post.node.id}
+        img={post.node.relationships.field_image.localFile.url}
+        title={post.node.title}
+        summary={post.node.field_teaser.length > 0 ? post.node.field_teaser : post.node.body.processed.substring(0, 300)}
+      />
+    ) )}
+  </Layout>
+)
+export const getArticles = graphql` 
   {
     allNodeArticle {
       edges {
         node {
+          fields {
+            slug
+          }
           title
+          field_teaser
           created
-          drupal_internal__nid
-          status
+          id
+          body {
+            processed
+            summary
+          }
+          relationships{
+          field_image {
+            localFile {
+              url
+            }
+          }
+        }
         }
       }
     }
   }
 `
-
-const BlogPage = () => (
-  <Layout>
-   <h1>List of blog pages</h1>
-        <StaticQuery
-          query={getArticles}
-          render={
-            data => (
-              <table>
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Created date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {data.allNodeArticle.edges.map(({ node }, index) => (
-                      <tr key={index}>
-                          <td>{node.drupal_internal__nid}</td>
-                          <td>{node.title}</td>
-                          <td>{node.created}</td>
-                      </tr>
-                    ))}
-                </tbody>
-              </table>
-              
-            )
-          }
-        />
-    <Link to="/">Go home</Link>
-  </Layout>
-)
-
 export default BlogPage

@@ -1,0 +1,8 @@
+uuid: 2cbfe449-9faa-4383-93f4-05ad657d0f22
+langcode: en
+status: true
+dependencies: {  }
+id: unix
+label: unix
+locked: false
+pattern: U
