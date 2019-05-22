@@ -1,6 +1,6 @@
 # Drupal and GatsbyJS project
 
-## Sourcint Gatsby from drupal
+## Sourcing Gatsby from drupal
 
 1. open gatsbysite/gatsby-config.js
 2. change base url 
